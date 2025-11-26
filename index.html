@@ -62,13 +62,30 @@
                 The world’s first AI-driven device designed to taper nicotine dependency, not just replace it. Clinical precision meets behavioral science.
             </p>
 
-            <!-- Email Capture Form -->
-            <div id="waitlist" class="max-w-md mx-auto bg-white p-2 rounded-full border border-slate-200 shadow-xl flex flex-col sm:flex-row gap-2">
-                <input type="email" placeholder="Enter your email address" class="flex-1 appearance-none rounded-full py-3 px-6 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 border-none" required>
-                <button type="button" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300">
+            <!-- Email Capture Form (Integrated with Formspree) -->
+            <form 
+                action="https://formspree.io/f/mjkdllww" 
+                method="POST" 
+                id="waitlist" 
+                class="max-w-md mx-auto bg-white p-2 rounded-full border border-slate-200 shadow-xl flex flex-col sm:flex-row gap-2"
+            >
+                <!-- This 'name' attribute is critical. It tells Formspree this input is the email -->
+                <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Enter your email address" 
+                    class="flex-1 appearance-none rounded-full py-3 px-6 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 border-none" 
+                    required
+                >
+                
+                <!-- Changed type to 'submit' so clicking it actually sends the data -->
+                <button 
+                    type="submit" 
+                    class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300"
+                >
                     Get Early Access
                 </button>
-            </div>
+            </form>
             <p class="text-xs text-slate-400 mt-4">Join 2,000+ others waiting for the launch. No spam.</p>
 
         </div>
