@@ -1,2 +1,2 @@
-# risetogether-site
-risetogether website
+# AICQD Technologies 
+AICQD Technologies website
